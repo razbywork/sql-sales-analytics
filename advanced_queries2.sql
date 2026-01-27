@@ -7,7 +7,7 @@ WITH monthly_revenue AS (
     JOIN products p ON oi.product_id = p.product_id
     WHERE o.status = 'Completed'
     GROUP BY DATE_TRUNC('month', o.order_date)
-),
+), 
 
 revenue_with_lag AS (
     SELECT
